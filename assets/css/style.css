@@ -1,0 +1,24 @@
+body{
+	background-image: url("../images/background.png");
+	background-size: 1200px;
+}
+
+
+h1{
+	font-size: 45px;
+	text-align: center;
+	font-family: "Sedgwick Ave", Times, serif;
+}
+
+
+p{
+	font-size: 15px;
+	text-align: center;
+	font-family: "Shadows Into Light Two";
+
+}
+
+.instructions{
+	border: ;
+
+}
