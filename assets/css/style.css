@@ -18,7 +18,10 @@ p{
 
 }
 
-.instructions{
-	border: ;
+#instructions{
+	border: 2px solid grey;
+	background-color: rgba(192 , 192 ,192 , 0.3);
+
 
 }
+
