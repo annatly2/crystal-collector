@@ -13,6 +13,7 @@ var goalMax = 120;
 var numOptions = [];
 var counter = 0;
 
+var newPoints = $('#spanPoints');
 $("numGoal").text(numGoal);
 $('#spanWins').text(wins);
 $('#spanLosses').text(losses);
@@ -45,7 +46,7 @@ for(var i = 0; i < 4; i++){
 		bValue = parseInt(bValue);
 		console.log(bValue);
 		counter+=bValue;
-		alert("New score: " + counter);
+		newPoints.text(counter);
 	})
 
 	$(".yellow-img").on("click", function(){
@@ -53,7 +54,7 @@ for(var i = 0; i < 4; i++){
 		yValue = parseInt(yValue);
 		console.log(yValue);
 		counter+=yValue;
-		alert("New score: " + counter);
+		newPoints.text(counter);
 	})
 
 	$(".red-img").on("click", function(){
@@ -61,7 +62,7 @@ for(var i = 0; i < 4; i++){
 		rValue = parseInt(rValue);
 		console.log(rValue);
 		counter+=rValue;
-		alert("New score: " + counter);
+		newPoints.text(counter);
 	})
 
 	$(".pink-img").on("click", function(){
@@ -69,9 +70,8 @@ for(var i = 0; i < 4; i++){
 		pValue = parseInt(pValue);
 		console.log(pValue);
 		counter+=pValue;
-		alert("New score: " + counter);
+		newPoints.text(counter);
 	})
-
 
 
 	if (counter === numGoal){
