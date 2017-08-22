@@ -6,11 +6,6 @@ var losses = 0;
 var points;
 var randomNum;
 
-$("numGoal").text(numGoal);
-$('#spanWins').text(wins);
-$('#spanLosses').text(losses);
-$('#spanPoints').text(points);
-
 var cryMin = 1;
 var cryMax = 11;
 var goalMin = 19;
@@ -18,15 +13,19 @@ var goalMax = 120;
 var numOptions = [];
 var counter = 0;
 
+$("numGoal").text(numGoal);
+$('#spanWins').text(wins);
+$('#spanLosses').text(losses);
+$('#spanPoints').text(points);
+
 var num1 = Math.floor(Math.random()*cryMax+cryMin);
 var num2 = Math.floor(Math.random()*cryMax+cryMin);
 var num3 = Math.floor(Math.random()*cryMax+cryMin);
 var num4 = Math.floor(Math.random()*cryMax+cryMin);
 
-var win = function(){};
+function winner (){};
 
-var lose = function(){};
-
+function loser (){};
 
 
 for(var i = 0; i < 4; i++){
@@ -72,6 +71,7 @@ for(var i = 0; i < 4; i++){
 		counter+=pValue;
 		alert("New score: " + counter);
 	})
+
 
 
 	if (counter === numGoal){
