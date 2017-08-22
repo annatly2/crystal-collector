@@ -1,33 +1,78 @@
-var numGoal = 50;
+$(document).ready(function(){
+
+var numGoal;
 var wins = 0;
 var losses = 0;
+var points;
+var randomNum;
 
-$("spanNumGoal").text(numGoal);
+$("numGoal").text(numGoal);
+$('#spanWins').text(wins);
+$('#spanLosses').text(losses);
+$('#spanPoints').text(points);
 
-//var spanNumGoal = $('spanNumGoal')[0];
-var spanWins = $('spanWins')[0];
-var spanLosses = $('spanLosses')[0];
-var spanScore = $('spanScore')[0];
-var spanPoints = $('spanPoints')[0];
-
-var numOptions = [10, 3, 2, 5];
+var cryMin = 1;
+var cryMax = 11;
+var goalMin = 19;
+var goalMax = 120;
+var numOptions = [];
 var counter = 0;
 
-for(var i = 0; i < numOptions.length; i++){
-	var gemImg = $(".gem-img");
-	gemImg.attr("data-crystalvalue", numOptions[i]);
+var num1 = Math.floor(Math.random()*cryMax+cryMin);
+var num2 = Math.floor(Math.random()*cryMax+cryMin);
+var num3 = Math.floor(Math.random()*cryMax+cryMin);
+var num4 = Math.floor(Math.random()*cryMax+cryMin);
+
+var win = function(){};
+
+var lose = function(){};
+
+
+
+for(var i = 0; i < 4; i++){
+	var bgem = $(".blue-img");
+	var ygem = $(".yellow-img");
+	var rgem = $(".red-img");
+	var pgem = $(".pink-img");
+
+	bgem.attr("data-crystalvalue", num1);
+	ygem.attr("data-crystalvalue", num2);
+	rgem.attr("data-crystalvalue", num3);
+	pgem.attr("data-crystalvalue", num4);
 }
 
-	$(".gem-img").on("click", function(){
+	$(".blue-img").on("click", function(){
+		var bValue = ($(this).attr("data-crystalvalue"));
+		bValue = parseInt(bValue);
+		console.log(bValue);
+		counter+=bValue;
+		alert("New score: " + counter);
+	})
 
-	console.log("this has been clicked");
+	$(".yellow-img").on("click", function(){
+		var yValue = ($(this).attr("data-crystalvalue"));
+		yValue = parseInt(yValue);
+		console.log(yValue);
+		counter+=yValue;
+		alert("New score: " + counter);
+	})
 
-	var crystalValue = ($(this).attr("data-crystalvalue"));
-	crystalValue = parseInt(crystalValue);
+	$(".red-img").on("click", function(){
+		var rValue = ($(this).attr("data-crystalvalue"));
+		rValue = parseInt(rValue);
+		console.log(rValue);
+		counter+=rValue;
+		alert("New score: " + counter);
+	})
 
-	counter+=crystalValue;
+	$(".pink-img").on("click", function(){
+		var pValue = ($(this).attr("data-crystalvalue"));
+		pValue = parseInt(pValue);
+		console.log(pValue);
+		counter+=pValue;
+		alert("New score: " + counter);
+	})
 
-	alert("New score: " + counter);
 
 	if (counter === numGoal){
 		alert("you win!");
@@ -35,16 +80,6 @@ for(var i = 0; i < numOptions.length; i++){
 	else if(counter >= numGoal){
 		alert("you lose!");
 	}
+});
 
 
-})
-
-// var updateNumGoal = function(){
-
-
-// }
-
-
-
-//crystals randomly generated 1-12
-//goal number is randomly between 19 and 120
