@@ -26,13 +26,16 @@ function winner (){
 	alert("You won! You're a cool crystal collector!");
 	wins++;
 	$("#spanWins").text(wins);
-
+	$("#happy-corgi-img").show();
+	$("#sad-corgi-img").hide();
 };
 
 function loser (){
 	alert("Sorry, you lost. You collected too many crystals.");
 	losses++;
 	$("#spanLosses").text(losses);
+	$("#sad-corgi-img").show();
+	$("#happy-corgi-img").hide();
 };
 
 function reset(){
@@ -55,6 +58,8 @@ function reset(){
 
 var newRandomNum = Math.floor(Math.random()*(goalMax-goalMin + 1)+goalMin);
 $("#randomNum").text(newRandomNum);
+	$("#happy-corgi-img").hide();
+	$("#sad-corgi-img").hide();
 
 for(var i = 0; i < 5; i++){
 	var rgem = $(".red-img");
@@ -93,6 +98,7 @@ for(var i = 0; i < 5; i++){
 		console.log(yValue);
 		counter+=yValue;
 		$("#spanPoints").text(counter);
+
 		if (counter === newRandomNum){
 			winner();
 			reset();
@@ -102,7 +108,6 @@ for(var i = 0; i < 5; i++){
 			reset();
 		}
 	});
-
 
 	$(".green-img").on("click", function(){
 		var gValue = ($(this).attr("data-crystalvalue"));
@@ -145,7 +150,6 @@ for(var i = 0; i < 5; i++){
 		counter+=pValue;
 		$("#spanPoints").text(counter);
 
-
 		if (counter === newRandomNum){
 			winner();
 			reset();
@@ -156,5 +160,3 @@ for(var i = 0; i < 5; i++){
 		}
 	});
 });
-
-

@@ -22,7 +22,7 @@ p{
 }
 
 .numGoal{
-	font-size: 30px;
+	font-size: 35px;
 	font-family: "Sedgwick Ave", Times, serif;
 	color: #333333;
 }
@@ -35,8 +35,16 @@ p{
 	opacity: 1;
 }
 
-#wins, #losses, #points{
+#wins, #losses{
 	font-size: 25px;
+	font-family: "Sedgwick Ave", Times, serif;
+	color: #333333;
+	text-align: center;
+	border: 2px solid grey;
+}
+
+#points{
+	font-size: 30px;
 	font-family: "Sedgwick Ave", Times, serif;
 	color: #333333;
 }

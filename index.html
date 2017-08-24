@@ -16,12 +16,13 @@
 	<div class = "container">
 		<div class = "row">
 			<div class = "col-md-2">
-			<img src = "https://m.popkey.co/b02639/pDgKO.gif" class = "corgi-img" width = "145px">
+				<div id = "wins">Wins: <span id = "spanWins">0</span></div>
+				<div id = "happy-corgi-img" ><img src = "https://m.popkey.co/b02639/pDgKO.gif" width = "150px"></div>
 			</div>
 
 			<div class = "col-md-8 center">
 				<header><h1>Crystals Collector</h1></header>
-				<p id = "instructions">You will be given a random Number Goal at the start of each game. The five crystals below all contain a different number. By clicking on a crystal you will gain a specific amount of points to your total points.  The size of your total points will increase as you collect more points.  You win the game by matching your total points to the Number Goal. You will lose the game if your total points goes above the Number Goal.  The value of each crystal is hidden from you until you click on it. When the game restarts, the values of each crystal change.  Good luck!</p>
+				<p id = "instructions">You will be given a random Number Goal at the start of each game. The five crystals below all contain a different number. By clicking on a crystal you will gain a specific amount of points to your total points. You win the game by matching your total points to the Number Goal. You will lose the game if your total points goes above the Number Goal.  The value of each crystal is hidden from you until you click on it. When the game restarts, the values of each crystal change.  Good luck!</p>
 				<div class = "numGoal">Number Goal: <span id= "randomNum"></span></div>
 				<div class = "gems">
 					<img src="assets/images/red.png" class="red-img" id = "num1" alt="gem" width = "120px">
@@ -32,13 +33,12 @@
 					<img src="assets/images/pink.png" class="pink-img" id = "num5" alt="gem" width = "90px">
 				</div>
 
-				<div id = "wins">Wins: <span id = "spanWins">0</span></div>
-				<div id = "losses">Losses: <span id = "spanLosses">0</span></div>
 				<div id = "points">Your Total Points: <span id = "spanPoints">0</span></div>
 			</div>
 
 			<div class = "col-md-2">
-			<!-- empty div -->
+				<div id = "losses">Losses: <span id = "spanLosses">0</span></div>
+				<div id = "sad-corgi-img" ><img src = "https://m.popkey.co/edbec8/xEdKX.gif" width = "150px"></div>
 			</div>
 		</div>
 	</div>
