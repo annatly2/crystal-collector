@@ -16,27 +16,44 @@ var counter = 0;
 var newPoints = $('#spanPoints');
 var numberGoal = $('#randomNum');
 
-var newRandomNum = Math.floor(Math.random()*(goalMax-goalMin + 1)+goalMin);
-numberGoal.text(newRandomNum);
-
-
-$("numGoal").text(numGoal);
-$('#spanWins').text(wins);
-$('#spanLosses').text(losses);
-
 var num1 = Math.floor(Math.random()*cryMax+cryMin);
 var num2 = Math.floor(Math.random()*cryMax+cryMin);
 var num3 = Math.floor(Math.random()*cryMax+cryMin);
 var num4 = Math.floor(Math.random()*cryMax+cryMin);
 var num5 = Math.floor(Math.random()*cryMax+cryMin);
 
+function winner (){
+	alert("You won! You're a cool crystal collector!");
+	wins++;
+	$("#spanWins").text(wins);
 
+};
 
+function loser (){
+	alert("Sorry, you lost. You collected too many crystals.");
+	losses++;
+	$('#spanLosses').text(losses);
+};
 
-function winner (){};
+function reset(){
+	newRandomNum = Math.floor(Math.random()*(goalMax-goalMin + 1)+goalMin);
+	$("#randomNum").text(newRandomNum);
+	counter = 0;
+	$("#spanPoints").text(counter);
+	var newNum1 = Math.floor(Math.random()*cryMax+cryMin);
+	var newNum2 = Math.floor(Math.random()*cryMax+cryMin);
+	var newNum3 = Math.floor(Math.random()*cryMax+cryMin);
+	var newNum4 = Math.floor(Math.random()*cryMax+cryMin);
+	var newNum5 = Math.floor(Math.random()*cryMax+cryMin);
+	rgem.attr("data-crystalvalue", newNum1);
+	ygem.attr("data-crystalvalue", newNum2);
+	ggem.attr("data-crystalvalue", newNum3);
+	bgem.attr("data-crystalvalue", newNum4);
+	pgem.attr("data-crystalvalue", newNum5);
+}
 
-function loser (){};
-
+var newRandomNum = Math.floor(Math.random()*(goalMax-goalMin + 1)+goalMin);
+$("#randomNum").text(newRandomNum);
 
 for(var i = 0; i < 5; i++){
 	var rgem = $(".red-img");
@@ -52,15 +69,21 @@ for(var i = 0; i < 5; i++){
 	pgem.attr("data-crystalvalue", num5);
 }
 
-
-
 	$(".red-img").on("click", function(){
 		var rValue = ($(this).attr("data-crystalvalue"));
 		rValue = parseInt(rValue);
 		console.log(rValue);
-		counter
-		+=rValue;
-		newPoints.text(counter);
+		counter+=rValue;
+		$("#spanPoints").text(counter);
+
+		if (counter === newRandomNum){
+			winner();
+			reset();
+		}
+		else if(counter >= newRandomNum){
+			loser();
+			reset();
+		}
 	});
 
 	$(".yellow-img").on("click", function(){
@@ -68,7 +91,15 @@ for(var i = 0; i < 5; i++){
 		yValue = parseInt(yValue);
 		console.log(yValue);
 		counter+=yValue;
-		newPoints.text(counter);
+		$("#spanPoints").text(counter);
+		if (counter === newRandomNum){
+			winner();
+			reset();
+		}
+		else if(counter >= newRandomNum){
+			loser();
+			reset();
+		}
 	});
 
 
@@ -77,7 +108,16 @@ for(var i = 0; i < 5; i++){
 		gValue = parseInt(gValue);
 		console.log(gValue);
 		counter+=gValue;
-		newPoints.text(counter);
+		$("#spanPoints").text(counter);
+
+		if (counter === newRandomNum){
+			winner();
+			reset();
+		}
+		else if(counter >= newRandomNum){
+			loser();
+			reset();
+		}
 	});
 
 	$(".blue-img").on("click", function(){
@@ -85,7 +125,16 @@ for(var i = 0; i < 5; i++){
 		bValue = parseInt(bValue);
 		console.log(bValue);
 		counter+=bValue;
-		newPoints.text(counter);
+		$("#spanPoints").text(counter);
+
+		if (counter === newRandomNum){
+			winner();
+			reset();
+		}
+		else if(counter >= newRandomNum){
+			loser();
+			reset();
+		}
 	});
 
 	$(".pink-img").on("click", function(){
@@ -93,19 +142,17 @@ for(var i = 0; i < 5; i++){
 		pValue = parseInt(pValue);
 		console.log(pValue);
 		counter+=pValue;
-		newPoints.text(counter);
+		$("#spanPoints").text(counter);
+
+		if (counter === newRandomNum){
+			winner();
+			reset();
+		}
+		else if(counter >= newRandomNum){
+			loser();
+			reset();
+		}
 	});
-
-
-
-	if (counter === numberGoal){
-		alert("you win!");
-		console.log("you win!");
-	}
-	else if(counter >= numberGoal){
-		alert("you lose!");
-		console.log("you lose");
-	}
 });
 
 
