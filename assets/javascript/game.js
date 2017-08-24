@@ -32,7 +32,7 @@ function winner (){
 function loser (){
 	alert("Sorry, you lost. You collected too many crystals.");
 	losses++;
-	$('#spanLosses').text(losses);
+	$("#spanLosses").text(losses);
 };
 
 function reset(){
@@ -45,6 +45,7 @@ function reset(){
 	var newNum3 = Math.floor(Math.random()*cryMax+cryMin);
 	var newNum4 = Math.floor(Math.random()*cryMax+cryMin);
 	var newNum5 = Math.floor(Math.random()*cryMax+cryMin);
+
 	rgem.attr("data-crystalvalue", newNum1);
 	ygem.attr("data-crystalvalue", newNum2);
 	ggem.attr("data-crystalvalue", newNum3);
@@ -143,6 +144,7 @@ for(var i = 0; i < 5; i++){
 		console.log(pValue);
 		counter+=pValue;
 		$("#spanPoints").text(counter);
+
 
 		if (counter === newRandomNum){
 			winner();

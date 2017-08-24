@@ -5,8 +5,9 @@ body{
 
 h1{
 	font-size: 45px;
-	text-align: center;
 	font-family: "Sedgwick Ave", Times, serif;
+	text-align: center;
+	color: #0099e6;
 }
 
 p{
@@ -22,8 +23,8 @@ p{
 
 .numGoal{
 	font-size: 30px;
-	color: red;
 	font-family: "Sedgwick Ave", Times, serif;
+	color: #333333;
 }
 
 .red-img, .yellow-img, .green-img, .blue-img, .pink-img{
@@ -37,4 +38,5 @@ p{
 #wins, #losses, #points{
 	font-size: 25px;
 	font-family: "Sedgwick Ave", Times, serif;
+	color: #333333;
 }

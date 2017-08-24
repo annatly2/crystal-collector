@@ -16,12 +16,12 @@
 	<div class = "container">
 		<div class = "row">
 			<div class = "col-md-2">
-			<!-- empty div -->
+			<img src = "https://m.popkey.co/b02639/pDgKO.gif" class = "corgi-img" width = "145px">
 			</div>
 
 			<div class = "col-md-8 center">
 				<header><h1>Crystals Collector</h1></header>
-				<p id = "instructions">You will be given a random Number Goal at the start of the game. There are five crystals below, each containing a different number. By clicking on a crystal you will add a specific amount of points to your total points.  You win the game by matching your total points to the Number Goal. You will lose the game if your total points goes above the Number Goal.  The value of each crystal is hidden from you until you click on it. Every time the game starts, values of each crystal change.  Good luck!</p>
+				<p id = "instructions">You will be given a random Number Goal at the start of each game. The five crystals below all contain a different number. By clicking on a crystal you will gain a specific amount of points to your total points.  The size of your total points will increase as you collect more points.  You win the game by matching your total points to the Number Goal. You will lose the game if your total points goes above the Number Goal.  The value of each crystal is hidden from you until you click on it. When the game restarts, the values of each crystal change.  Good luck!</p>
 				<div class = "numGoal">Number Goal: <span id= "randomNum"></span></div>
 				<div class = "gems">
 					<img src="assets/images/red.png" class="red-img" id = "num1" alt="gem" width = "120px">
@@ -30,13 +30,11 @@
 
 					<img src="assets/images/blue.png" class="blue-img" id = "num4" alt="gem" width = "130px">
 					<img src="assets/images/pink.png" class="pink-img" id = "num5" alt="gem" width = "90px">
-					
-
 				</div>
 
 				<div id = "wins">Wins: <span id = "spanWins">0</span></div>
 				<div id = "losses">Losses: <span id = "spanLosses">0</span></div>
-				<div id = "points">Your Total Points: <span id = "spanPoints"></span></div>
+				<div id = "points">Your Total Points: <span id = "spanPoints">0</span></div>
 			</div>
 
 			<div class = "col-md-2">
@@ -44,8 +42,6 @@
 			</div>
 		</div>
 	</div>
-
-
 
 
 <script type="text/javascript" src="assets/javascript/game.js"></script>
