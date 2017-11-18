@@ -4,7 +4,7 @@ In this Crystal Collectors game, users will be given a random Number Goal at the
 
 Technologies used in this game include: HTML, CSS, Bootstrap, and jQuery.
 
-:gem::gem::gem::gem::gem::gem::gem::gem::gem::gem:
+:gem: :gem: :gem: :gem: :gem: :gem: :gem: :gem: :gem: :gem: :gem: :gem: :gem: :gem: :gem: :gem: :gem: :gem: :gem: :gem: 
 
 Start collecting crystals here:
 https://annatly2.github.io/crystal-collector/
